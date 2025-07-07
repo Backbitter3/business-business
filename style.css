@@ -13,13 +13,21 @@
   --col-text1: white;
 }
 
+html {
+  overflow: scroll;
+}
+
 /* Navigation Section Styling */
 nav {
   /* layout settings */
+  position: sticky;
+  top: 0px;
+  left: 0px;
+  z-index: 1;
   height: 100px;
   /* colors */
-  background-color: var(--col-blue1);
-  color: var(--col-text1);
+  background-color: white;
+  color: black;
   /* display settings */
   display: flex;
 }
@@ -48,8 +56,9 @@ nav {
 
 .navlinks > ul > a {
   /* colors */
-  color: white;
+  color: black;
   /* text settings */
+  font-size: 1.2rem;
   text-decoration: none;
   list-style-type: none;
 }
@@ -72,15 +81,12 @@ nav {
   text-align: center;
 }
 
-/* Main Section Styling 
+/* Main Section Styling */
 main {
-  /* display settings 
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  /* layout settings 
-  width: 100%;
-}*/
+  /* display settings */
+  position: sticky;
+  /* layout settings */
+}
 
 main > .section-container {
   width: 100%;
@@ -142,7 +148,32 @@ main > .section-container {
   padding: 8px 0;
 }
 
-/* default styles */
+/* Footer Section Styling */
+footer {
+  /* colors */
+  background-color: var(--col-blue1);
+  color: var(--col-text1);
+  /* layout settings */
+  height: 100px;
+  /* display settings */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* text settings */
+  font-size: 1.2rem;
+}
+
+footer a {
+  /* text settings */
+  font-size: 1rem;
+  /* colors */
+  color: var(--col-text1);
+  /* layout settings */
+  margin: 8px 0 0 0;
+}
+
+/* Default Styling */
 ul {
   display: block;
   list-style-type: disc;
