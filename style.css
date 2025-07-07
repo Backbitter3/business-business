@@ -8,7 +8,7 @@
 :root {
   --col-blue1: rgb(50 70 120);
   --col-blue2: rgb(20 60 120);
-  --col-grey1: rgb(180 180 180);
+  --col-grey1: rgb(230 230 230);
   --col-gold1: rgb(200 165 5);
   --col-text1: white;
 }
@@ -25,6 +25,7 @@ nav {
 }
 
 .navlinks {
+  /* display settings */
   flex-grow: 1;
   display: flex;
   align-items: center;
@@ -32,6 +33,7 @@ nav {
 }
 
 .navlinks > ul > .active {
+  /* text settings */
   text-decoration: underline;
 }
 
@@ -53,17 +55,100 @@ nav {
 }
 
 .navlogo {
+  /* layout settings */
   width: 300px;
   height: 100%;
+  /* display settings */
   display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .logo {
+  /* layout settings */
   height: 100%;
 }
 
 .navlogo > p {
+  /* text settings */
   text-align: center;
+}
+
+/* Main Section Styling 
+main {
+  /* display settings 
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  /* layout settings 
+  width: 100%;
+}*/
+
+main > .section-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Hero Text Section Styling */
+.hero {
+  /* display settings */
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* layout settings */
+  width: 100%;
+  height: 300px;
+  /* colors */
+  background-color: var(--col-blue2);
+  color: var(--col-text1);
+  /* text settings */
+  font-size: 2rem;
+}
+
+.hero > #phone {
+  /* layout setting */
+  margin: 40px 0 0 0;
+  /* colors */
+  color: var(--col-gold1);
+  /* text settings */
+  font-size: 3rem;
+}
+
+/* Statement Section Styling */
+.statement {
+  /* colors */
+  background-color: var(--col-grey1);
+  /* display settings */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* layout settings */
+}
+
+.statement > div {
+  /* layout settings */
+  width: 60%;
+  padding: 60px 0;
+  /* text settings */
+  font-size: 1.4rem;
+}
+
+.statement p {
+  padding: 40px 0;
+}
+
+.statement li {
+  padding: 8px 0;
+}
+
+/* default styles */
+ul {
+  display: block;
+  list-style-type: disc;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 40px;
 }
