@@ -1,4 +1,69 @@
 * {
   padding: 0;
   margin: 0;
+  font-family: Verdana, Tahoma, sans-serif;
+}
+
+/* Global Variables */
+:root {
+  --col-blue1: rgb(50 70 120);
+  --col-blue2: rgb(20 60 120);
+  --col-grey1: rgb(180 180 180);
+  --col-gold1: rgb(200 165 5);
+  --col-text1: white;
+}
+
+/* Navigation Section Styling */
+nav {
+  /* layout settings */
+  height: 100px;
+  /* colors */
+  background-color: var(--col-blue1);
+  color: var(--col-text1);
+  /* display settings */
+  display: flex;
+}
+
+.navlinks {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navlinks > ul > .active {
+  text-decoration: underline;
+}
+
+.navlinks > ul {
+  /* display settings */
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  gap: 20px;
+  /* text settings */
+}
+
+.navlinks > ul > a {
+  /* colors */
+  color: white;
+  /* text settings */
+  text-decoration: none;
+  list-style-type: none;
+}
+
+.navlogo {
+  width: 300px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo {
+  height: 100%;
+}
+
+.navlogo > p {
+  text-align: center;
 }
