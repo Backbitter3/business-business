@@ -8,6 +8,18 @@
 }
 
 
+/* Default Styling */
+ul {
+  display: block;
+  list-style-type: disc;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 40px;
+}
+
+
 /* Default Spacing Override */
 * {
   padding: 0;
@@ -25,7 +37,9 @@
   --col-gold1: rgb(209 170 40);
   --col-text1: white;
   --foot-height: 100px;
-  --nav-height: 100px;
+  --nav-height: 70px;
+  --font-size-hero: 1.6rem;
+  --font-size-phone: 2.4rem;
 }
 
 
@@ -38,9 +52,10 @@ html {
 /* Navigation Section Styling */
 nav {
   /* layout settings */
-  position: sticky;
+  padding: 0;
+  margin: 0;
+  position: relative;
   top: 0px;
-  left: 0px;
   z-index: 1;
   height: var(--nav-height);
   /* colors */
@@ -58,26 +73,31 @@ nav {
   justify-content: center;
 }
 
-.navlinks > ul > .active {
+.navlinks a.active {
   /* text settings */
   text-decoration: underline;
 }
 
-.navlinks > ul > :hover {
+.navlinks a:hover {
   /* text settings */
   text-decoration: underline;
 }
 
-.navlinks > ul {
+.navlinks ul {
+  /* layout settings */
+  padding-left: 0;
   /* display settings */
   display: flex;
   width: 100%;
   justify-content: center;
   gap: 20px;
-  /* text settings */
 }
 
 .navlinks > ul > a {
+  /* layout settings */
+  min-width: 60px;
+  /* display settings */
+  flex-shrink: 0;
   /* colors */
   color: black;
   /* text settings */
@@ -88,20 +108,15 @@ nav {
 
 .navlogo {
   /* layout settings */
-  width: 300px;
-  height: 100%;
+  width: 0px;
+  height: 0%;
   /* display settings */
-  display: flex;
+  display: none;
 }
 
 .logo {
   /* layout settings */
   height: 100%;
-}
-
-.navlogo > p {
-  /* text settings */
-  text-align: center;
 }
 
 
@@ -114,6 +129,7 @@ main {
 }
 
 main > .section-container {
+  flex-shrink: 0;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -129,7 +145,6 @@ main > .section-container {
 /* Hero Text Section Styling */
 .hero {
   /* display settings */
-  align-self: center;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -140,14 +155,14 @@ main > .section-container {
   /* colors */
   background-color: var(--col-blue2);
   color: var(--col-text1);
-  /* text settings */
-  font-family: Timmana, sans-serif;
-  font-size: 2rem;
 }
 
 .hero div {
+  max-width: 80%;
+  /* text settings */
+  text-align: center;
   font-family: "Timmana", Verdana, Tahoma, sans-serif;
-  font-size: 2.4rem;
+  font-size: var(--font-size-hero);
   font-weight: 400;
   font-style: normal;
 }
@@ -158,7 +173,7 @@ main > .section-container {
   /* colors */
   color: var(--col-gold1);
   /* text settings */
-  font-size: 3rem;
+  font-size: var(--font-size-phone);
 }
 
 
@@ -251,13 +266,71 @@ footer a {
   border-bottom: 1px solid black;
 }
 
-/* Default Styling */
-ul {
-  display: block;
-  list-style-type: disc;
-  margin-top: 1em;
-  margin-bottom: 1em;
-  margin-left: 0;
-  margin-right: 0;
-  padding-left: 40px;
+
+/* Media Queries */
+@media (min-width: 601px) {
+  :root {
+    --col-blue1: rgb(79 106 134);
+    --col-blue2: rgb(8 79 107);
+    --col-grey1: rgb(230 230 230);
+    --col-grey2: rgb(200 200 192);
+    --col-gold1: rgb(209 170 40);
+    --col-text1: white;
+    --foot-height: 100px;
+    --nav-height: 100px;
+    --font-size-hero: 2.4rem;
+    --font-size-phone: 3rem;
+  }
+
+  nav {
+    /* layout settings */
+    position: sticky;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+    height: var(--nav-height);
+    /* colors */
+    background-color: white;
+    color: black;
+    /* display settings */
+    display: flex;
+  }
+
+  .navlogo {
+    /* layout settings */
+    width: 300px;
+    height: 100%;
+    /* display settings */
+    display: flex;
+  }
+
+  .navlinks > ul {
+    /* layout settings */
+    padding-left: 0;
+    /* display settings */
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  main > .section-container {
+    min-width: 700px;
+  }
+
+  .hero {
+    /* display settings */
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* layout settings */
+    width: 100%;
+    min-width: 500px;
+    height: 360px;
+    /* colors */
+    background-color: var(--col-blue2);
+    color: var(--col-text1);
+  }
 }
