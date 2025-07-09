@@ -7,11 +7,14 @@
   font-style: normal;
 }
 
+
+/* Default Spacing Override */
 * {
   padding: 0;
   margin: 0;
   font-family: "Roboto", Verdana, Tahoma, sans-serif;
 }
+
 
 /* Global Variables */
 :root {
@@ -25,9 +28,12 @@
   --nav-height: 100px;
 }
 
+
+/* Page Styles */
 html {
   overflow: scroll;
 }
+
 
 /* Navigation Section Styling */
 nav {
@@ -53,6 +59,11 @@ nav {
 }
 
 .navlinks > ul > .active {
+  /* text settings */
+  text-decoration: underline;
+}
+
+.navlinks > ul > :hover {
   /* text settings */
   text-decoration: underline;
 }
@@ -93,6 +104,7 @@ nav {
   text-align: center;
 }
 
+
 /* Main Section Styling */
 main {
   /* display settings */
@@ -106,6 +118,13 @@ main > .section-container {
   display: flex;
   flex-direction: column;
 }
+
+
+/* Section Container Styling */
+.section-container h1 {
+  margin: 1rem 0;
+}
+
 
 /* Hero Text Section Styling */
 .hero {
@@ -142,6 +161,7 @@ main > .section-container {
   font-size: 3rem;
 }
 
+
 /* Statement Section Styling */
 .statement {
   /* colors */
@@ -169,6 +189,7 @@ main > .section-container {
   padding: 8px 0;
 }
 
+
 /* Footer Section Styling */
 footer {
   /* colors */
@@ -192,6 +213,42 @@ footer a {
   color: var(--col-text1);
   /* layout settings */
   margin: 8px 0 0 0;
+}
+
+
+/* Table Section Styling */
+.table {
+  /* text settings */
+  font-size: 1.4rem;
+  /* layout setings */
+  width: 100%;
+  /* display settings */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.table table {
+  /* colors */
+  background-color: var(--col-grey2);
+  /* layout settings */
+  border: 1px solid var(--col-gold1);
+  border-radius: 1rem;
+  padding: 8px;
+}
+
+.table > .clarify {
+  /* layout settings */
+  margin: 40px 0 0 0;
+}
+
+.table td {
+  padding: 0 1rem 0 0;
+}
+
+.table th {
+  text-align: left;
+  border-bottom: 1px solid black;
 }
 
 /* Default Styling */
