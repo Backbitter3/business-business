@@ -21,6 +21,8 @@
   --col-grey2: rgb(200 200 192);
   --col-gold1: rgb(209 170 40);
   --col-text1: white;
+  --foot-height: 100px;
+  --nav-height: 100px;
 }
 
 html {
@@ -34,7 +36,7 @@ nav {
   top: 0px;
   left: 0px;
   z-index: 1;
-  height: 100px;
+  height: var(--nav-height);
   /* colors */
   background-color: white;
   color: black;
@@ -96,6 +98,7 @@ main {
   /* display settings */
   position: sticky;
   /* layout settings */
+  min-height: calc(100vh - var(--foot-height) - var(--nav-height));
 }
 
 main > .section-container {
@@ -172,7 +175,7 @@ footer {
   background-color: var(--col-blue2);
   color: var(--col-text1);
   /* layout settings */
-  height: 100px;
+  height: var(--foot-height);
   /* display settings */
   display: flex;
   flex-direction: column;
