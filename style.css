@@ -1,7 +1,16 @@
+/* Custom Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Timmana&display=swap');
+
+.timmana-regular {
+  font-family: "Timmana", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 * {
   padding: 0;
   margin: 0;
-  font-family: Verdana, Tahoma, sans-serif;
+  font-family: "Roboto", Verdana, Tahoma, sans-serif;
 }
 
 /* Global Variables */
@@ -105,12 +114,20 @@ main > .section-container {
   justify-content: center;
   /* layout settings */
   width: 100%;
-  height: 300px;
+  height: 340px;
   /* colors */
   background-color: var(--col-blue2);
   color: var(--col-text1);
   /* text settings */
+  font-family: Timmana, sans-serif;
   font-size: 2rem;
+}
+
+.hero div {
+  font-family: "Timmana", Verdana, Tahoma, sans-serif;
+  font-size: 2.4rem;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .hero > #phone {
@@ -152,7 +169,7 @@ main > .section-container {
 /* Footer Section Styling */
 footer {
   /* colors */
-  background-color: var(--col-blue1);
+  background-color: var(--col-blue2);
   color: var(--col-text1);
   /* layout settings */
   height: 100px;
