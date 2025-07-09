@@ -6,10 +6,11 @@
 
 /* Global Variables */
 :root {
-  --col-blue1: rgb(50 70 120);
-  --col-blue2: rgb(20 60 120);
+  --col-blue1: rgb(79 106 134);
+  --col-blue2: rgb(8 79 107);
   --col-grey1: rgb(230 230 230);
-  --col-gold1: rgb(200 165 5);
+  --col-grey2: rgb(200 200 192);
+  --col-gold1: rgb(209 170 40);
   --col-text1: white;
 }
 
