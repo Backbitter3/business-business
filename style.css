@@ -266,16 +266,46 @@ footer a {
   border-bottom: 1px solid black;
 }
 
+/* Contact Page Styling */
+.contact {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.contact div {
+  width: 100%;
+  margin: 0 0 4rem 0;
+  padding: 1rem;
+}
+
+.contact p {
+  margin: 1rem;
+  font-size: 2rem;
+  font-family: "Timmana", Verdana, Tahoma, sans-serif;
+  font-weight: 400;
+}
+
+.contact .info {
+  font-size: 2.4rem;
+}
+
+/* general style tags */
+.bg-blue {
+  background-color: var(--col-blue2);
+  color: var(--col-text1);
+}
+
+.tx-gold {
+  color: var(--col-gold1);
+}
+
 
 /* Media Queries */
 @media (min-width: 601px) {
   :root {
-    --col-blue1: rgb(79 106 134);
-    --col-blue2: rgb(8 79 107);
-    --col-grey1: rgb(230 230 230);
-    --col-grey2: rgb(200 200 192);
-    --col-gold1: rgb(209 170 40);
-    --col-text1: white;
     --foot-height: 100px;
     --nav-height: 100px;
     --font-size-hero: 2.4rem;
